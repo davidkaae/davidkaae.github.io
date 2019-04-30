@@ -4,6 +4,9 @@ https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-wi
 # Run site locally
 `bundle exec jekyll serve`
 
+## Run with drafts
+`bundle exec jekyll serve --drafts`
+
 ## Theme
 https://github.com/pages-themes/minimal
 

@@ -1,4 +1,6 @@
 #theme: jekyll-theme-minimal
+# gems:
+#   - jekyll-archives
 
 title: Developer barking
 
@@ -6,7 +8,7 @@ title: Developer barking
 name: Developer barking
 
 # Short description (goes below the title; it will also be used in the RSS feed)
-description: This is for me to remember :)
+description: My blog for me to remember.
 
 # Your name, as you want it to appear underneath each post and in the footer
 author: David Sørensen

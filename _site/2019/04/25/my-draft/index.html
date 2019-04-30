@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {% seo %}
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Hello World Draft | Developer barking</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Hello World Draft" />
+<meta name="author" content="David Sørensen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hello World Draft" />
+<meta property="og:description" content="Hello World Draft" />
+<link rel="canonical" href="http://localhost:4000/2019/04/25/my-draft/" />
+<meta property="og:url" content="http://localhost:4000/2019/04/25/my-draft/" />
+<meta property="og:site_name" content="Developer barking" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-04-25T14:33:45+02:00" />
+<script type="application/ld+json">
+{"headline":"Hello World Draft","dateModified":"2019-04-25T14:33:45+02:00","datePublished":"2019-04-25T14:33:45+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/04/25/my-draft/"},"url":"http://localhost:4000/2019/04/25/my-draft/","author":{"@type":"Person","name":"David Sørensen"},"description":"Hello World Draft","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -14,7 +30,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Display:700,900">
     
 
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="/assets/css/style.css?v=54b3fd0c54e5102eb1b5ee85f9c956da833b627e">
     
     
     <!--[if lt IE 9]>
@@ -30,8 +46,8 @@
                       <a class="text-muted" href="#">Subscribe</a>
                     </div> -->
                     <div class="col-12 text-center">
-                      <a class="blog-header-logo text-dark" href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a>
-                      <div class="mb-0" style="margin-top:10px">{{site.description}}</div>
+                      <a class="blog-header-logo text-dark" href="http://localhost:4000/">Developer barking</a>
+                      <div class="mb-0" style="margin-top:10px">My blog for me to remember.</div>
                     </div>
                     <!-- <div class="col-3 d-flex justify-content-end align-items-center">
                       <a class="text-muted" href="#">
@@ -100,58 +116,62 @@
               </div>
     <!-- <div class="container"> -->
         <!-- <header class="header">             -->
-            <!-- <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1> -->
+            <!-- <h1><a href="http://localhost:4000/">Developer barking</a></h1> -->
 
-            <!-- {% if site.logo %}
-            <img src="{{site.logo | relative_url}}" alt="Logo" />
-            {% endif %} -->
+            <!--  -->
 
-            <!-- <p>{{ site.description | default: site.github.project_tagline }}</p> -->
+            <!-- <p>My blog for me to remember.</p> -->
 
-            <!-- {% if site.github.is_project_page %}
-        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
+            <!-- 
+        <p class="view"><a href="https://github.com/davidkaae/davidkaae.github.io">View the Project on GitHub <small>davidkaae/davidkaae.github.io</small></a></p>
+        
 
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-        {% endif %}
+        
 
-        {% if site.show_downloads %}
-        <ul class="downloads">
-          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
-          <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
-        </ul>
-        {% endif %} -->
+         -->
         <!-- </header> -->
     <main role="main" class="container">
         <div class="row">
             <div class="col-md-8 blog-main">
-                {{ content }}
+                <p>
+    <small>25 April 2019 by David Sørensen</small>
+    
+</p>
+
+<h1>Hello World Draft</h1>
+
+<h1 id="hello-world-draft">Hello World Draft</h1>
+
+
+
             </div>
     
             <aside class="col-md-4 blog-sidebar">
                 <!-- <div class="p-3 mb-3 bg-light rounded">
                     <h4 class="font-italic">About</h4>
-                    <p class="mb-0">{{site.description}}</p>
+                    <p class="mb-0">My blog for me to remember.</p>
                 </div> -->
                 <div class="p-3">
                         <h4 class="font-italic">Recent Posts</h4>
                         <ol class="list-unstyled mb-0">
-                            {% for post in site.posts %}
+                            
                                 <li>
-                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                    <a href="/sql/2019/04/30/sql-with-statement/">SQL WITH Statement</a>
                                 </li>                                    
-                            {% endfor %}
+                            
+                                <li>
+                                    <a href="/2019/04/25/my-draft/">Hello World Draft</a>
+                                </li>                                    
+                            
                         </ol>
                     </div>   
 
                 <!-- <div class="p-3">
                     <h4 class="font-italic">Categories</h4>
                     <ol class="list-unstyled mb-0">
-                        {% for category in site.categories %}
-                            <li><a href="#">{{category[0]}}</a></li>                                    
-                        {% endfor %}
+                        
+                            <li><a href="#">SQL</a></li>                                    
+                        
                     </ol>
                 </div> -->
         
@@ -169,7 +189,7 @@
 
 
     <footer class="blog-footer">
-        <p>Blog maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</p>
+        <p>Blog maintained by <a href="https://github.com/davidkaae">davidkaae</a>.</p>
         <p>
             <a href="#">Back to top</a>
         </p>
@@ -185,18 +205,7 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     
-    {% if site.google_analytics %}
-    <script>
-        (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', '{{ site.google_analytics }}', 'auto');
-        ga('send', 'pageview');
-    </script>
-    {% endif %}
+    
 </body>
 
 </html>

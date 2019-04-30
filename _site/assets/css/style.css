@@ -1,7 +1,6 @@
-/* stylelint-disable selector-list-comma-newline-after */
-body { position: relative; }
+main { padding-bottom: 180px; margin-top: 20px; }
 
-main { padding-bottom: 180px; }
+pre code { font-size: 0.9em; }
 
 .blog-header { line-height: 1; border-bottom: 1px solid #e5e5e5; }
 
@@ -52,6 +51,6 @@ h1, h2, h3, h4, h5, h6 { font-family: "Playfair Display", Georgia, "Times New Ro
 .blog-post-meta { margin-bottom: 1.25rem; color: #999; }
 
 /* Footer */
-.blog-footer { padding: 2.5rem 0; color: #999; text-align: center; background-color: #f9f9f9; border-top: .05rem solid #e5e5e5; position: absolute; bottom: 0; width: 100%; }
+.blog-footer { padding: 2.5rem 0; color: #999; text-align: center; background-color: #f9f9f9; border-top: .05rem solid #e5e5e5; position: absolute; width: 100%; }
 
 .blog-footer p:last-child { margin-bottom: 0; }

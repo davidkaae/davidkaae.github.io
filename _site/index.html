@@ -7,27 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Welcome to GitHub Pages | Developer barking</title>
+<title>Developer barking | My blog for me to remember.</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Welcome to GitHub Pages" />
+<meta property="og:title" content="Developer barking" />
 <meta name="author" content="David Sørensen" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This is for me to remember :)" />
-<meta property="og:description" content="This is for me to remember :)" />
+<meta name="description" content="My blog for me to remember." />
+<meta property="og:description" content="My blog for me to remember." />
 <link rel="canonical" href="http://localhost:4000/" />
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Developer barking" />
 <script type="application/ld+json">
-{"headline":"Welcome to GitHub Pages","@type":"WebSite","url":"http://localhost:4000/","name":"Developer barking","author":{"@type":"Person","name":"David Sørensen"},"description":"This is for me to remember :)","@context":"http://schema.org"}</script>
+{"headline":"Developer barking","@type":"WebSite","url":"http://localhost:4000/","name":"Developer barking","author":{"@type":"Person","name":"David Sørensen"},"description":"My blog for me to remember.","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Display:700,900">
     
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=131dba67801fed13eb6d3471fd50ca1f2ac70335">
+    <link rel="stylesheet" href="/assets/css/style.css?v=54b3fd0c54e5102eb1b5ee85f9c956da833b627e">
     
     
     <!--[if lt IE 9]>
@@ -44,6 +45,7 @@
                     </div> -->
                     <div class="col-12 text-center">
                       <a class="blog-header-logo text-dark" href="http://localhost:4000/">Developer barking</a>
+                      <div class="mb-0" style="margin-top:10px">My blog for me to remember.</div>
                     </div>
                     <!-- <div class="col-3 d-flex justify-content-end align-items-center">
                       <a class="text-muted" href="#">
@@ -116,7 +118,7 @@
 
             <!--  -->
 
-            <!-- <p>This is for me to remember :)</p> -->
+            <!-- <p>My blog for me to remember.</p> -->
 
             <!-- 
         <p class="view"><a href="https://github.com/davidkaae/davidkaae.github.io">View the Project on GitHub <small>davidkaae/davidkaae.github.io</small></a></p>
@@ -126,108 +128,112 @@
 
          -->
         <!-- </header> -->
-        <main role="main" class="container">
-            <div class="row">
-                <div class="col-md-8 blog-main">
-                    <h2 id="welcome-to-github-pages">Welcome to GitHub Pages</h2>
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-8 blog-main">
+                <!-- ## Pages -->
 
-<ul>
+<!-- <ul>
   
     <li>
-      <a href="/2019/04/25/hello-world/">Hello World Post</a>
+      <a href="/sql/2019/04/30/sql-with-statement/">SQL WITH Statement</a>
     </li>
   
-</ul>
+    <li>
+      <a href="/2019/04/25/my-draft/">Hello World Draft</a>
+    </li>
+  
+</ul> -->
 
-<p>You can use the <a href="https://github.com/davidkaae/davidkaae.github.io/edit/master/index.md">editor on GitHub</a> to maintain and preview the content for your website in Markdown files.</p>
+<!-- <h2>Categories</h2>
 
-<p>Whenever you commit to this repository, GitHub Pages will run <a href="https://jekyllrb.com/">Jekyll</a> to rebuild the pages in your site, from the content in your Markdown files.</p>
+<div style="display:inline-block; margin-right: 20px;">
+  <h3>SQL</h3>
+  <ul>
+    
+      <li><a href="/sql/2019/04/30/sql-with-statement/">SQL WITH Statement</a></li>
+    
+  </ul>
+  </div>
+ -->
 
-<h3 id="markdown">Markdown</h3>
+<p>
+    <small>30 April 2019 by David Sørensen</small>
+    
+</p>
 
-<p>Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for</p>
+<h1>SQL WITH Statement</h1>
 
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Syntax highlighted code block
+<p>The WITH statement is a replacement of subqueries. But it gives the ability to name and organize subqueries.</p>
 
-<span class="gh"># Header 1</span>
-<span class="gu">## Header 2</span>
-<span class="gu">### Header 3</span>
-<span class="p">
--</span> Bulleted
-<span class="p">-</span> List
-<span class="p">
-1.</span> Numbered
-<span class="p">2.</span> List
+<h2 id="example">Example</h2>
+<pre><code class="language-SQL">    WITH 
+    PublishedPosts AS (
+        SELECT *
+        FROM Posts
+        WHERE Published = 1 
+    ),
+    AuthorsWithPublishedPosts AS
+    (
+        SELECT *
+        FROM Authors AS a JOIN PublishedPosts AS p ON a.PostId = p.Id				
+    )
 
-<span class="gs">**Bold**</span> and _Italic_ and <span class="sb">`Code`</span> text
-
-<span class="p">[</span><span class="nv">Link</span><span class="p">](</span><span class="sx">url</span><span class="p">)</span> and !<span class="p">[</span><span class="nv">Image</span><span class="p">](</span><span class="sx">src</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>For more details see <a href="https://guides.github.com/features/mastering-markdown/">GitHub Flavored Markdown</a>.</p>
-
-<h3 id="jekyll-themes">Jekyll Themes</h3>
-
-<p>Your Pages site will use the layout and styles from the Jekyll theme you have selected in your <a href="https://github.com/davidkaae/davidkaae.github.io/settings">repository settings</a>. The name of this theme is saved in the Jekyll <code class="highlighter-rouge">_config.yml</code> configuration file.</p>
-
-<h3 id="support-or-contact">Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/categories/github-pages-basics/">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
-
-                </div>
-      
-                <aside class="col-md-4 blog-sidebar">
-                    <div class="p-3 mb-3 bg-light rounded">
-                        <h4 class="font-italic">About</h4>
-                        <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-                    </div>
-            
-                    <div class="p-3">
-                        <h4 class="font-italic">Archives</h4>
-                        <ol class="list-unstyled mb-0">
-                        <li><a href="#">March 2014</a></li>
-                        <li><a href="#">February 2014</a></li>
-                        <li><a href="#">January 2014</a></li>
-                        <li><a href="#">December 2013</a></li>
-                        <li><a href="#">November 2013</a></li>
-                        <li><a href="#">October 2013</a></li>
-                        <li><a href="#">September 2013</a></li>
-                        <li><a href="#">August 2013</a></li>
-                        <li><a href="#">July 2013</a></li>
-                        <li><a href="#">June 2013</a></li>
-                        <li><a href="#">May 2013</a></li>
-                        <li><a href="#">April 2013</a></li>
-                        </ol>
-                    </div>
-            
-                    <div class="p-3">
-                        <h4 class="font-italic">Elsewhere</h4>
-                        <ol class="list-unstyled">
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        </ol>
-                    </div>
-                </aside><!-- /.blog-sidebar -->
-            </div><!-- /.row -->
-        </main>
+    SELECT DISTINCT * FROM AuthorsWithPublishedPosts
+</code></pre>
 
 
-        <footer class="blog-footer">
-            <p>Blog maintained by <a href="https://github.com/davidkaae">davidkaae</a>.</p>
-            <p>
-                <a href="#">Back to top</a>
-            </p>
-        </footer>
-
-        <!-- <footer class="footer">
-            <div class="container">
-                
-                    This site is maintained by <a href="https://github.com/davidkaae">davidkaae</a>
-                
             </div>
-        </footer> -->
-    <!-- </div> -->
+    
+            <aside class="col-md-4 blog-sidebar">
+                <!-- <div class="p-3 mb-3 bg-light rounded">
+                    <h4 class="font-italic">About</h4>
+                    <p class="mb-0">My blog for me to remember.</p>
+                </div> -->
+                <div class="p-3">
+                        <h4 class="font-italic">Recent Posts</h4>
+                        <ol class="list-unstyled mb-0">
+                            
+                                <li>
+                                    <a href="/sql/2019/04/30/sql-with-statement/">SQL WITH Statement</a>
+                                </li>                                    
+                            
+                                <li>
+                                    <a href="/2019/04/25/my-draft/">Hello World Draft</a>
+                                </li>                                    
+                            
+                        </ol>
+                    </div>   
+
+                <!-- <div class="p-3">
+                    <h4 class="font-italic">Categories</h4>
+                    <ol class="list-unstyled mb-0">
+                        
+                            <li><a href="#">SQL</a></li>                                    
+                        
+                    </ol>
+                </div> -->
+        
+                <div class="p-3">
+                    <h4 class="font-italic">Find me</h4>
+                    <ol class="list-unstyled">
+                    <li><a target="_blank" href="https://github.com/davidkaae">GitHub</a></li>
+                    <li><a target="_blank" href="https://twitter.com/davidkaae">Twitter</a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/davidkaae/">LinkedIn</a></li>
+                    </ol>
+                </div>
+            </aside><!-- /.blog-sidebar -->
+        </div><!-- /.row -->
+    </main>
+
+
+    <footer class="blog-footer">
+        <p>Blog maintained by <a href="https://github.com/davidkaae">davidkaae</a>.</p>
+        <p>
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+      
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
