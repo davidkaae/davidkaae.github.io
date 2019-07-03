@@ -25,3 +25,9 @@ permalink: pretty
 
 # How many articles do you wish to appear on the front page:
 paginate: 3
+
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true

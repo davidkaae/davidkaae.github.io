@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Native HTML details toggle"
+categories: [Frontend]
 # tags: [HTML]
 ---
 
