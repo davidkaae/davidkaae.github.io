@@ -2,13 +2,13 @@
 # gems:
 #   - jekyll-archives
 
-title: Developer barking
+title: Notes by David
 
 # Name of your blog (this will show up at the top of your page and in the RSS feed)
-name: Developer barking
+name: Notes by David
 
 # Short description (goes below the title; it will also be used in the RSS feed)
-description: My blog for me to remember.
+description: For me to remember.
 
 # Your name, as you want it to appear underneath each post and in the footer
 author: David Sørensen
